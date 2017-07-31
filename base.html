@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>后台基本信息页面</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+	</head>
+
+	<body>
+		<div class="container clearfix">
+			<div class="logo pad20 clearfix">
+				<img src="img/logo.jpg" class="float-l" />
+				<ul class="float-r">
+					<li class="float-l">
+						<a href="pwdModify.html" target="base">修改密码</a>
+					</li>
+					<li class="float-l">
+						<a href="#">退出</a>
+					</li>
+				</ul>
+			</div>
+			<div class="container-left float-l">
+				<ul class="pad20">
+					<li class="left-menu active">
+						<a href="javascript:;">权限管理</a>
+						<ul class="pad20">
+							<li>
+								<a href="userList.html" target="base">1账号列表</a>
+							</li>
+							<li>
+								<a href="roleManagement.html" target="base">2角色管理</a>
+							</li>
+						</ul>
+					</li>
+					<li class="left-menu">
+						<a href="javascript:;">下单管理</a>
+						<ul class="pad20">
+							<li>
+								<a href="orderManagement.html" target="base">1套餐列表</a>
+							</li>
+							<li>
+								<a href="orderDefined.html" target="base">2自定义列表</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="container-rigth float-r">
+				<iframe name="base" scrolling="yes" frameborder="no" width="100%" height="845"></iframe>
+			</div>
+		</div>
+		<script src="lib/assets/js/jquery1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 初始化container-left的高度
+			$('.container-left').height($(window).height() - 80);
+
+			// 左边点击显示下拉菜单
+			$('.container-left .left-menu').on('click', function() {
+				var index = $(this).index();
+				// 初始化所有左边的二级菜单的样式
+				$('.container-left .left-menu ul').slideUp();
+				// 单击显示二级菜单
+				$('.container-left .left-menu ul').eq(index).slideDown();
+				// 给当前的li添加样式
+				$(this).addClass('active').siblings().removeClass('active');
+			})
+		</script>
+	</body>
+
+</html>
