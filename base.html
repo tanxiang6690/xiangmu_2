@@ -35,13 +35,34 @@
 						</ul>
 					</li>
 					<li class="left-menu">
-						<a href="javascript:;">下单管理</a>
+						<a href="javascript:;">订单管理</a>
 						<ul class="pad20">
 							<li>
-								<a href="orderManagement.html" target="base">1套餐列表</a>
+								<a href="waitPay.html" target="base">待支付</a>
 							</li>
 							<li>
-								<a href="orderDefined.html" target="base">2自定义列表</a>
+								<a href="waitCheck.html" target="base">待审核</a>
+							</li>
+							<li>
+								<a href="checkNoPass.html" target="base">审核未通过</a>
+							</li>
+							<li>
+								<a href="checkPass.html" target="base">审核已通过</a>
+							</li>
+							<li>
+								<a href="waitSend.html" target="base">样品待邮递</a>
+							</li>
+							<li>
+								<a href="waitReceive.html" target="base">样品待接收</a>
+							</li>
+							<li>
+								<a href="checking.html" target="base">检测中</a>
+							</li>
+							<li>
+								<a href="completed.html" target="base">已完成</a>
+							</li>
+							<li>
+								<a href="waitEvaluate.html" target="base">待评价</a>
 							</li>
 						</ul>
 					</li>
@@ -55,9 +76,9 @@
 		<script type="text/javascript">
 			// 初始化container-left的高度
 			$('.container-left').height($(window).height() - 80);
-			
+
 			// 屏幕大小改变时，container-left跟着改变
-			$(window).resize(function(){
+			$(window).resize(function() {
 				$('.container-left').height($(window).height() - 80);
 			})
 

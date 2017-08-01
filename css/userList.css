@@ -28,24 +28,6 @@
 	text-align: left;
 }
 
-::-webkit-input-placeholder { 
-	/* WebKit browsers */  
-    color: #ccc;  
-}  
-:-moz-placeholder { 
-	/* Mozilla Firefox 4 to 18 */  
-   color: #ccc;  
-   opacity:  1;  
-}  
-::-moz-placeholder { 
-	/* Mozilla Firefox 19+ */  
-   color:#ccc;  
-   opacity:  1;  
-}  
-:-ms-input-placeholder { 
-	/* Internet Explorer 10+ */  
-   color:#ccc;  
-}
 .container .form .search-list:nth-of-type(3){
 	width: 16%;
 }
@@ -55,7 +37,7 @@
 }
 .container .form .search-list:last-child {
 	padding: 0;
-	width: 20%;
+	width: 25%;
 }
 
 .container .form button {
@@ -72,7 +54,11 @@
 	left: 51%;
 }
 
-
+.container.taocan .form .search{
+	/* 具有套餐这个类时搜索按钮的位置 */
+	position: absolute;
+	left: 38%;
+}
 /* 右边的table部分 */
 
 .container .table,
@@ -104,6 +90,11 @@
 .container .table table tr td{
 	text-align: center;
 }
+.container .table table tr td.bei-zhu{
+	line-height: 1.5;
+	padding: 10px 0;
+}
+
 .container .table table tr:last-child td{
 	border-bottom: none;
 }
