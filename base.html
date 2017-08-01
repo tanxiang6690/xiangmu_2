@@ -48,21 +48,26 @@
 				</ul>
 			</div>
 			<div class="container-rigth float-r">
-				<iframe name="base" scrolling="yes" frameborder="no" width="100%" height="845"></iframe>
+				<iframe name="base" src="userList.html" scrolling="yes" frameborder="no" width="100%" height="845"></iframe>
 			</div>
 		</div>
 		<script src="lib/assets/js/jquery1.12.3.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			// 初始化container-left的高度
 			$('.container-left').height($(window).height() - 80);
+			
+			// 屏幕大小改变时，container-left跟着改变
+			$(window).resize(function(){
+				$('.container-left').height($(window).height() - 80);
+			})
 
 			// 左边点击显示下拉菜单
 			$('.container-left .left-menu').on('click', function() {
 				var index = $(this).index();
 				// 初始化所有左边的二级菜单的样式
-				$('.container-left .left-menu ul').slideUp();
+				$('.container-left .left-menu ul').stop().slideUp();
 				// 单击显示二级菜单
-				$('.container-left .left-menu ul').eq(index).slideDown();
+				$('.container-left .left-menu ul').eq(index).stop().slideDown();
 				// 给当前的li添加样式
 				$(this).addClass('active').siblings().removeClass('active');
 			})
